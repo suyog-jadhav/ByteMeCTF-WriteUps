@@ -167,24 +167,24 @@ ciphertext = b"".join(fragments[i]["payload"] for i in chain)
 The challenge uses a custom symmetric stream cipher. Analyzing the forward encryption algorithm:
 
 1. Initial XOR with key byte $k = \text{key}[i \pmod{32}]$ and chain value:  
-   $x_1 = \text{byte} \oplus k \oplus ((\text{chain}[i] \times 17) \mathbin{\&} \text{0xFF})$
+   $x_1 = \text{byte} \oplus k \oplus ((\text{chain}[i] \times 17) \bmod{256})$
 2. Left bitwise rotation by $r = (k + \text{chain}[i] + i) \pmod 8$:  
    $x_2 = \text{ROL}_8(x_1, r)$
 3. 4-bit nibble swap:  
    $x_3 = \text{SwapNibbles}(x_2)$
 4. Final position-dependent XOR:  
-   $\text{ciphertext}[i] = x_3 \oplus (((i \times 31) + \text{chain}[i]) \mathbin{\&} \text{0xFF})$
+   $\text{ciphertext}[i] = x_3 \oplus (((i \times 31) + \text{chain}[i]) \bmod{256})$
 
 To decrypt, we invert each operation in reverse order:
 
 1. Invert position XOR:  
-   $x_3 = c[i] \oplus (((i \times 31) + \text{chain}[i]) \mathbin{\&} \text{0xFF})$
+   $x_3 = c[i] \oplus (((i \times 31) + \text{chain}[i]) \bmod{256})$
 2. Invert nibble swap:  
    $x_2 = \text{SwapNibbles}(x_3)$
 3. Right bitwise rotation:  
    $x_1 = \text{ROR}_8(x_2, (k + \text{chain}[i] + i) \pmod 8)$
 4. Invert key & chain XOR:  
-   $\text{plaintext}[i] = x_1 \oplus ((\text{chain}[i] \times 17) \mathbin{\&} \text{0xFF}) \oplus k$
+   $\text{plaintext}[i] = x_1 \oplus ((\text{chain}[i] \times 17) \bmod{256}) \oplus k$
 
 Running the decryption yields the plaintext flag:
 
