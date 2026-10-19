@@ -41,7 +41,6 @@ soul_fracture/
     └── fragment_23.sf
 ```
 
-![Extracted Challenge Files and Structure](resources/01_challenge_files.png)
 
 Inspecting `README.txt` emphasizes the challenge's core theme:
 - The 24 fragments are out of order.
@@ -77,7 +76,6 @@ soul_data :
 ==============================
 ```
 
-![Inspecting Fragment Structure and Metadata](resources/02_fragment_metadata.png)
 
 Each fragment contains:
 1. `fragment_id`: An identifier from `00` to `23`.
@@ -122,7 +120,6 @@ def dfs(path, visited):
     return None
 ```
 
-![Graph Traversal and Recovered Hamiltonian Cycle](resources/03_chain_recovery.png)
 
 Executing the graph search and testing cycle rotations recovers the true cyclic chain order:
 
@@ -196,7 +193,6 @@ Running the decryption yields the plaintext flag:
     b'OWASP{th3_s0ul_r3m3mb3rs_wh4t_w4s_l0st}'
 ```
 
-![Solver Execution and Flag Recovery](resources/04_solver_output.png)
 
 ---
 
