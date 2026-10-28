@@ -48,6 +48,8 @@ Inspecting `README.txt` emphasizes the challenge's core theme:
 - The chain is circular (*"The final memory is connected back to the first"*).
 - `soul_fracture.dat` is an unreferenced decoy containing random bytes.
 
+![Challenge Archive Structure](resources/01_challenge_files.png)
+
 ---
 
 ## Step 2 — Fragment Metadata Analysis
@@ -89,6 +91,8 @@ Analyzing the numerical patterns across all fragments reveals that `echo` values
 
 $$\text{Fragment } A \longrightarrow \text{Fragment } B \iff \text{echo}(A) = \text{resonance}(B)$$
 
+![Fragment Metadata Structure](resources/02_fragment_metadata.png)
+
 ---
 
 ## Step 3 — Graph Modeling & Chain Reconstruction
@@ -127,6 +131,8 @@ Executing the graph search and testing cycle rotations recovers the true cyclic 
 [+] Recovered Soul chain:
     12 -> 09 -> 00 -> 04 -> 11 -> 21 -> 07 -> 15 -> 19 -> 22 -> 13 -> 05 -> 18 -> 01 -> 03 -> 02 -> 16 -> 08 -> 10 -> 23 -> 17 -> 14 -> 06 -> 20
 ```
+
+![Hamiltonian Cycle Recovery](resources/03_chain_recovery.png)
 
 ---
 
@@ -304,6 +310,8 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+![Solver Execution Output](resources/04_solver_output.png)
 
 ---
 

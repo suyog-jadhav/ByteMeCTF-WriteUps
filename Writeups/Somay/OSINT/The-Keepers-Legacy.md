@@ -18,7 +18,7 @@ The riddle's line *"mark the ground exactly where each fragment was born"* is do
 
 ## Step 3 - Recognize the pattern
 
-![Pattern](<resources/solution.png>)
+![Pattern](resources/solution.png)
 
 With all seven points placed, connecting them traces the outline of the Big Dipper. The riddle's *"a pattern that has watched the world turn through countless generations"* is a direct nod to the Big Dipper - it never sets, and it has been used as a celestial reference point for millennia, which is also why cultures worldwide (including the Saptarishi Mandal naming in Indian tradition) recognize the same seven-star shape independently.
 

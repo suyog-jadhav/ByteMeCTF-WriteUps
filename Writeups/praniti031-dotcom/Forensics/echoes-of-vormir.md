@@ -1,22 +1,14 @@
-\# Echoes of Vormir (Forensics, Easy)
+# Echoes of Vormir (Forensics, Easy)
 
+**Author:** Praniti Gangad
 
+**Category:** Forensics  
 
-\*\*Author:\*\* Praniti Gangad
+**Difficulty:** Easy
 
-\*\*Category:\*\* Forensics  
+---
 
-\*\*Difficulty:\*\* Easy
-
-
-
-\---
-
-
-
-\## Challenge Description
-
-
+## Challenge Description
 
 > Four echoes remain from the journey to Vormir. Each image contains a piece of the story, but the pieces are scattered.
 
@@ -24,81 +16,51 @@
 
 > The objective is to investigate the four files, understand the clues they contain, and reconstruct the final message.
 
-
-
-\## Summary
-
-
+## Summary
 
 This challenge involves analyzing four PNG images to uncover hidden metadata, hexadecimal clues, and Base64-encoded flag fragments. By examining the files, decoding the clues, and combining the fragments in the intended order, the final flag can be recovered.
 
-
-
-\## Flag
-
-
+## Flag
 
 ```text
 
-OWASP{echoes\_are\_hard\_to\_bury}
+OWASP{echoes_are_hard_to_bury}
 
 ```
 
+---
 
-
-\---
-
-
-
-\## Step 1 — Identify the File Types
-
-
+## Step 1 — Identify the File Types
 
 First, identify the formats of the four provided files using the `file` command.
 
-
-
 ```bash
 
-file soul\_01.png soul\_02.png soul\_03.png soul\_04.png
+file soul_01.png soul_02.png soul_03.png soul_04.png
 
 ```
-
-
 
 All four files were identified as PNG images. However, the visible image content does not reveal the complete message, so further investigation is required.
 
+---
 
-
-\---
-
-
-
-\## Step 2 — Inspect the Image Metadata
-
-
+## Step 2 — Inspect the Image Metadata
 
 Use ExifTool to inspect the metadata of all four images.
 
-
-
 ```bash
 
-exiftool soul\_01.png
+exiftool soul_01.png
 
-exiftool soul\_02.png
+exiftool soul_02.png
 
-exiftool soul\_03.png
+exiftool soul_03.png
 
-exiftool soul\_04.png
+exiftool soul_04.png
 
 ```
 
-
-
 The fourth image contains the following comment:
-
-
 
 ```text
 
@@ -106,23 +68,13 @@ Comment : The beginning comes first.
 
 ```
 
-
-
 This clue suggests that the order of the images is important when reconstructing the final message.
 
+---
 
-
-\---
-
-
-
-\## Step 3 — Decode the Hexadecimal Clue
-
-
+## Step 3 — Decode the Hexadecimal Clue
 
 The third image contains the following hexadecimal string:
-
-
 
 ```text
 
@@ -130,11 +82,7 @@ The third image contains the following hexadecimal string:
 
 ```
 
-
-
 Decode the hexadecimal string using `xxd`:
-
-
 
 ```bash
 
@@ -142,11 +90,7 @@ echo "4445434f44453a424153453634" | xxd -r -p
 
 ```
 
-
-
-\*\*Output:\*\*
-
-
+**Output:**
 
 ```text
 
@@ -154,41 +98,25 @@ DECODE:BASE64
 
 ```
 
-
-
 This reveals that Base64 decoding is required to recover the final message.
 
+---
 
-
-\---
-
-
-
-\## Step 4 — Search for Hidden Data
-
-
+## Step 4 — Search for Hidden Data
 
 Next, use the `strings` command to search for readable data in the first two image files.
 
-
-
 ```bash
 
-strings soul\_01.png | tail
+strings soul_01.png | tail
 
-strings soul\_02.png | tail
+strings soul_02.png | tail
 
 ```
 
-
-
 The following encoded fragments were discovered.
 
-
-
-\*\*Fragment from `soul\_01.png`:\*\*
-
-
+**Fragment from `soul_01.png`:**
 
 ```text
 
@@ -196,11 +124,7 @@ T1dBU1B7ZWNob2VzX2FyZV9oYXJk
 
 ```
 
-
-
-\*\*Fragment from `soul\_02.png`:\*\*
-
-
+**Fragment from `soul_02.png`:**
 
 ```text
 
@@ -208,39 +132,23 @@ X3RvX2J1cnl9
 
 ```
 
-
-
 These strings are Base64-encoded fragments of the final flag.
 
+---
 
-
-\---
-
-
-
-\## Step 5 — Determine the Order and Reconstruct the Message
-
-
+## Step 5 — Determine the Order and Reconstruct the Message
 
 Based on the story clue, the intended order of the echoes is:
 
-
-
 ```text
 
-soul\_04 → soul\_03 → soul\_01 → soul\_02
+soul_04 → soul_03 → soul_01 → soul_02
 
 ```
 
-
-
-The encoded flag fragments are found in `soul\_01.png` and `soul\_02.png`.
-
-
+The encoded flag fragments are found in `soul_01.png` and `soul_02.png`.
 
 Combining the fragments in the intended order produces the following Base64 string:
-
-
 
 ```text
 
@@ -248,19 +156,11 @@ T1dBU1B7ZWNob2VzX2FyZV9oYXJkX3RvX2J1cnl9
 
 ```
 
+---
 
-
-\---
-
-
-
-\## Step 6 — Decode the Final Flag
-
-
+## Step 6 — Decode the Final Flag
 
 Decode the combined Base64 string using the `base64` command.
-
-
 
 ```bash
 
@@ -268,31 +168,19 @@ echo 'T1dBU1B7ZWNob2VzX2FyZV9oYXJkX3RvX2J1cnl9' | base64 -d
 
 ```
 
-
-
-\*\*Output:\*\*
-
-
+**Output:**
 
 ```text
 
-OWASP{echoes\_are\_hard\_to\_bury}
+OWASP{echoes_are_hard_to_bury}
 
 ```
 
-
-
 The final flag has been successfully recovered.
 
+---
 
-
-\---
-
-
-
-\## Solution Summary
-
-
+## Solution Summary
 
 | Field | Value |
 
@@ -314,57 +202,31 @@ The final flag has been successfully recovered.
 
 | Encoding Technique | Base64 |
 
-| Final Flag | `OWASP{echoes\_are\_hard\_to\_bury}` |
+| Final Flag | `OWASP{echoes_are_hard_to_bury}` |
 
+---
 
-
-\---
-
-
-
-\## Root Cause / Forensics Methodology
-
-
+## Root Cause / Forensics Methodology
 
 This challenge demonstrates how files can contain information beyond their visible content. Metadata, appended strings, and encoded data can all provide clues during a forensic investigation.
 
+1\. **Metadata Analysis** — ExifTool reveals a comment that provides a clue about the ordering of the images.
 
+2\. **Hexadecimal Decoding** — Converting the hexadecimal string into readable text reveals the instruction `DECODE:BASE64`.
 
-1\. \*\*Metadata Analysis\*\* — ExifTool reveals a comment that provides a clue about the ordering of the images.
+3\. **Hidden Data Extraction** — The `strings` command reveals Base64-encoded fragments appended to the PNG files.
 
+4\. **Message Reconstruction** — The fragments are combined according to the intended order to reconstruct the complete encoded message.
 
+5\. **Base64 Decoding** — Decoding the reconstructed string reveals the final flag.
 
-2\. \*\*Hexadecimal Decoding\*\* — Converting the hexadecimal string into readable text reveals the instruction `DECODE:BASE64`.
-
-
-
-3\. \*\*Hidden Data Extraction\*\* — The `strings` command reveals Base64-encoded fragments appended to the PNG files.
-
-
-
-4\. \*\*Message Reconstruction\*\* — The fragments are combined according to the intended order to reconstruct the complete encoded message.
-
-
-
-5\. \*\*Base64 Decoding\*\* — Decoding the reconstructed string reveals the final flag.
-
-
-
-\### Key Takeaway
-
-
+### Key Takeaway
 
 In CTF forensics challenges, do not rely only on the visible contents of a file. Inspect metadata, search for appended data, investigate encoding clues, and correlate the evidence to uncover hidden information.
 
+---
 
-
-\---
-
-
-
-\## Tools Used
-
-
+## Tools Used
 
 | Tool | Purpose |
 
@@ -380,15 +242,9 @@ In CTF forensics challenges, do not rely only on the visible contents of a file.
 
 | `base64` | Decodes the final message |
 
+---
 
-
-\---
-
-
-
-\## Timeline
-
-
+## Timeline
 
 | Step | Action | Result |
 
@@ -406,27 +262,17 @@ In CTF forensics challenges, do not rely only on the visible contents of a file.
 
 | 6 | Decoded the final message | Recovered the flag |
 
+---
 
+## Conclusion
 
-\---
+The **Echoes of Vormir** challenge was solved by combining basic digital forensics techniques with hexadecimal and Base64 decoding. The challenge highlights the importance of carefully inspecting files and following clues to reconstruct hidden information.
 
-
-
-\## Conclusion
-
-
-
-The \*\*Echoes of Vormir\*\* challenge was solved by combining basic digital forensics techniques with hexadecimal and Base64 decoding. The challenge highlights the importance of carefully inspecting files and following clues to reconstruct hidden information.
-
-
-
-\*\*Final Flag:\*\*
-
-
+**Final Flag:**
 
 ```text
 
-OWASP{echoes\_are\_hard\_to\_bury}
+OWASP{echoes_are_hard_to_bury}
 
 ```
 

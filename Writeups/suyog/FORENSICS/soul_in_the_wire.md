@@ -55,7 +55,7 @@ The capture contains a high volume of interleaved traffic across multiple protoc
 
 Because the file contains thousands of packets of ambient network traffic, manually inspecting streams without specific filters is impractical.
 
-![Protocol Breakdown and Capture Overview](resources/recon_protocols.png)
+![Protocol Breakdown and Capture Overview](resources/soul_stone_terminal.png)
 
 ---
 
@@ -97,8 +97,6 @@ OWASP{WRONG_TIMELINE}
 ```
 
 As the challenge prompt warns (*"The payload may deceive you. The metadata remembers."*), all plaintext strings placed inside packet payloads are intentional decoys. The actual data is exfiltrated through network packet metadata and covert channels.
-
-![Host Identification and Decoy Strings](resources/suspicious_hosts_decoys.png)
 
 ---
 
