@@ -147,6 +147,8 @@ A categorized, searchable catalog of all official challenge solutions and writeu
 | **SoulStone Invisible Signal** | Medium | Suyog Jadhav | Audio Waveform Analysis, High-Frequency Spectrogram Inscription, LSB Decoding | [Read Writeup →](Writeups/suyog/STEGO/soulstone_invisible_signal.md) |
 | **One Soul, One Truth** | Medium | Oshin Shukla (AzureCurrent) | Spatial LSB Image Steganography, Color Plane Isolation | [Read Writeup →](Writeups/oshinshukla07/Steganography/one_soul_one_truth.md) |
 | **The Fifth Stone** | Insane | Oshin Shukla (AzureCurrent) | Steghide Passphrase Recovery, Palette Manipulation, Multi-Layer Embedding | [Read Writeup →](Writeups/oshinshukla07/Steganography/the_fifth_stone.md) |
+| **Broken Backup** | Easy–Medium | Swara Shirke | Configuration Analysis, Decimal to Hex, XOR Obfuscation | [Read Writeup →](Writeups/Swara/MISC/broken_backup.md) |
+| **Stego_SoulStone** | Medium–Hard | Swara Shirke | Trailing Whitespace Stego, Base64 Stream, Repeating-Key XOR | [Read Writeup →](Writeups/Swara/MISC/stego_soulstone.md) |
 
 ---
 

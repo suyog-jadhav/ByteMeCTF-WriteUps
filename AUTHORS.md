@@ -4,7 +4,7 @@ Meet the authors and challenge creators behind **ByteMeCTF 2026**, organized by 
 
 ---
 
-## 👥 Authors Roster (19 Creators)
+## 👥 Authors Roster (20 Creators)
 
 | Author | GitHub Handle | Total Challenges | Primary Domains |
 |---|---|:---:|---|
@@ -27,6 +27,7 @@ Meet the authors and challenge creators behind **ByteMeCTF 2026**, organized by 
 | **Krishna Kulkarni** | [@krishna-kulkarni](https://github.com/krishna-kulkarni) | 1 | Cryptography (Repeating-Key XOR Stream) |
 | **Praniti Gangad** | [@praniti031-dotcom](https://github.com/praniti031-dotcom) | 1 | Digital Forensics (PNG Chunks & Exif Metadata) |
 | **Siddharth Kabade** | [@siddharthkabade](https://github.com/siddharthkabade) | 1 | Web Exploitation (JWT Secret Reuse) |
+| **Swara Shirke** | [@swaraops](https://github.com/swaraops) | 2 | Misc / Cryptography (XOR), Steganography (Whitespace) |
 
 ---
 
@@ -185,3 +186,10 @@ Meet the authors and challenge creators behind **ByteMeCTF 2026**, organized by 
 
 ### 🔑 Siddharth Kabade ([@siddharthkabade](https://github.com/siddharthkabade))
 * [GradePortal - JWT Secret Reuse](Writeups/siddharth/Web/gradeportal_jwt_secret_reuse.md) — JWT Algorithm Confusion & Symmetric Secret Reuse
+
+---
+
+### 🕵️‍♀️ Swara Shirke ([@swaraops](https://github.com/swaraops))
+* [Broken Backup](Writeups/Swara/MISC/broken_backup.md) — Configuration Analysis, Decimal to Hex, XOR Obfuscation
+* [Stego_SoulStone](Writeups/Swara/MISC/stego_soulstone.md) — Trailing Whitespace Steganography, Base64, Repeating-Key XOR
+* 📄 *Original Word documents are available in [Writeups/Swara/MISC/](Writeups/Swara/MISC/).*

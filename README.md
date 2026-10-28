@@ -6,9 +6,9 @@
 
 [![Event](https://img.shields.io/badge/Event-ByteMeCTF_2026-orange?style=for-the-badge&logo=target)](https://github.com/suyog-jadhav/ByteMeCTF-WriteUps)
 [![Organized by](https://img.shields.io/badge/Organized_By-OWASP_PCCOE-blue?style=for-the-badge&logo=owasp)](https://github.com/suyog-jadhav/ByteMeCTF-WriteUps)
-[![Challenges](https://img.shields.io/badge/Challenges-67_Writeups-success?style=for-the-badge&logo=hackthebox)](CATEGORY_INDEX.md)
+[![Challenges](https://img.shields.io/badge/Challenges-69_Writeups-success?style=for-the-badge&logo=hackthebox)](CATEGORY_INDEX.md)
 [![Categories](https://img.shields.io/badge/Categories-8_Domains-purple?style=for-the-badge)](CATEGORY_INDEX.md)
-[![Authors](https://img.shields.io/badge/Authors-19_Creators-informational?style=for-the-badge&logo=github)](AUTHORS.md)
+[![Authors](https://img.shields.io/badge/Authors-20_Creators-informational?style=for-the-badge&logo=github)](AUTHORS.md)
 [![Status](https://img.shields.io/badge/Status-Complete_&_Verified-brightgreen?style=for-the-badge)](#)
 
 <p align="center">
@@ -37,9 +37,9 @@ ByteMeCTF 2026 was themed around the mystery and trials of Vormir and the Soul S
 | [🔐 **Cryptography**](#-cryptography) | **6** | Medium → Hard | Hamiltonian Graph Traversal, Affine Ciphers, RSA Common Modulus, ECC DLog |
 | [🔍 **Digital & Network Forensics**](#-digital--network-forensics) | **7** | Easy → Hard | Volatility 3 Memory Dumps, TLS PCAP Decryption, Covert Channels, Disk Images |
 | [🛰️ **Open Source Intelligence (OSINT)**](#-open-source-intelligence-osint) | **17** | Easy → Expert | The Western Ghats Expedition, Satellite Triangulation, Public Dossiers |
-| [🖼️ **Steganography & Misc**](#-steganography--misc) | **11** | Easy → Insane | 7-Stage Shattered QR Assembly, Audio Spectrogram, LSB, Steghide Palette |
+| [🖼️ **Steganography & Misc**](#-steganography--misc) | **13** | Easy → Insane | 7-Stage Shattered QR Assembly, Trailing Whitespace, XOR Backups, Audio Spectrogram |
 | [🤖 **AI & LLM Security**](#-ai--llm-security) | **1** | Medium | System Prompt Extraction, Persona Jailbreaking & Emotional Framing |
-| **Total** | **67** | **All Tiers** | **Comprehensive Solution Archive** |
+| **Total** | **69** | **All Tiers** | **Comprehensive Solution Archive** |
 
 ---
 
@@ -183,6 +183,8 @@ Several challenges in ByteMeCTF were designed as progressive, multi-stage narrat
 | **SoulStone Invisible Signal** | Medium | [Suyog Jadhav](AUTHORS.md#suyog-jadhav) | Audio Waveform Analysis, Spectrogram Inscription, LSB Decoding | [Writeup →](Writeups/suyog/STEGO/soulstone_invisible_signal.md) |
 | **One Soul, One Truth** | Medium | [Oshin Shukla](AUTHORS.md#oshin-shukla-azurecurrent) | Spatial LSB Image Steganography, Color Plane Isolation | [Writeup →](Writeups/oshinshukla07/Steganography/one_soul_one_truth.md) |
 | **The Fifth Stone** | Insane | [Oshin Shukla](AUTHORS.md#oshin-shukla-azurecurrent) | Steghide Passphrase Recovery, Palette Manipulation, Multi-Layer Embedding | [Writeup →](Writeups/oshinshukla07/Steganography/the_fifth_stone.md) |
+| **Broken Backup** | Easy–Medium | [Swara Shirke](AUTHORS.md#swara-shirke) | Configuration Analysis, Decimal to Hex, Single-byte XOR Obfuscation | [Writeup →](Writeups/Swara/MISC/broken_backup.md) |
+| **Stego_SoulStone** | Medium–Hard | [Swara Shirke](AUTHORS.md#swara-shirke) | Trailing Whitespace Covert Channel, Base64 Stream, Repeating-Key XOR | [Writeup →](Writeups/Swara/MISC/stego_soulstone.md) |
 
 ---
 
@@ -196,7 +198,7 @@ Several challenges in ByteMeCTF were designed as progressive, multi-stage narrat
 
 ## 👥 Authors Directory
 
-Special thanks to all **19 authors and challenge creators** from the OWASP PCCOE team:
+Special thanks to all **20 authors and challenge creators** from the OWASP PCCOE team:
 
 | Author | Handle | Challenges Authored |
 |---|---|---|
@@ -219,6 +221,7 @@ Special thanks to all **19 authors and challenge creators** from the OWASP PCCOE
 | **Krishna Kulkarni** | [@krishna-kulkarni](https://github.com/krishna-kulkarni) | Cryptography: The Soul Stone: A Worthy Sacrifice (XOR Stream) |
 | **Praniti Gangad** | [@praniti031-dotcom](https://github.com/praniti031-dotcom) | Digital Forensics: Echoes of Vormir (PNG Chunks & Exif) |
 | **Siddharth Kabade** | [@siddharthkabade](https://github.com/siddharthkabade) | Web Exploitation: GradePortal (JWT Secret Reuse) |
+| **Swara Shirke** | [@swaraops](https://github.com/swaraops) | Misc: Broken Backup (XOR) & Stego_SoulStone (Whitespace Stego) |
 
 > 📖 *For detailed profiles, biographies, and full challenge catalogs, visit [AUTHORS.md](AUTHORS.md).*
 
