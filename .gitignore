@@ -35,3 +35,7 @@ Thumbs.db
 referenc/
 tmp/
 *.tmp
+
+# Word Documents
+*.docx
+*.doc

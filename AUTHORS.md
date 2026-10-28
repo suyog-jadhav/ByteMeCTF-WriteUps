@@ -93,7 +93,6 @@ Meet the 20 authors and challenge creators behind ByteMeCTF 2026, organized by t
 * **Mobile / Android Reverse Engineering**
   * [SoulVault](Writeups/pratik/Mobile/soulvault.md) - Android APK, Obfuscated Native JNI, Ghidra, Proof of Work
   * [Soul Ascension](Writeups/pratik/Mobile/soul_ascension.md) - Android Native Decryption, Runtime Hooking with Frida
-* Styled Microsoft Word documents for Pratik's writeups are available in [Writeups/pratik/Word_Documents/](Writeups/pratik/Word_Documents/).
 
 ---
 
@@ -167,7 +166,6 @@ Meet the 20 authors and challenge creators behind ByteMeCTF 2026, organized by t
 ### <img src="https://github.com/swaraops.png?size=80" width="32" height="32" style="border-radius:50%; vertical-align:middle;" /> Swara Shirke ([@swaraops](https://github.com/swaraops))
 * [Broken Backup](Writeups/Swara/MISC/broken_backup.md) - Configuration Analysis, Decimal to Hex, XOR Obfuscation
 * [Stego_SoulStone](Writeups/Swara/MISC/stego_soulstone.md) - Trailing Whitespace Steganography, Base64, Repeating-Key XOR
-* Original Word documents are available in [Writeups/Swara/MISC/](Writeups/Swara/MISC/).
 
 ---
 

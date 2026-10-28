@@ -26,7 +26,6 @@
     <a href="CATEGORY_INDEX.md"><b>Category Index</b></a> &bull;
     <a href="AUTHORS.md"><b>Authors Directory</b></a> &bull;
     <a href="#featured-campaign-missions"><b>Featured Campaigns</b></a> &bull;
-    <a href="Writeups/pratik/Word_Documents/"><b>Word Docs (.docx)</b></a> &bull;
     <a href="CONTRIBUTING.md"><b>Contributing Guide</b></a>
   </p>
 
@@ -395,21 +394,22 @@ ByteMeCTF-WriteUps/
 ├── CONTRIBUTING.md         # Guidelines, conventions, and templates for contributors
 ├── .gitignore              # Repository gitignore rules
 └── Writeups/               # Primary challenge writeup directories
-    ├── <author-handle>/
-    │   └── <Category>/
-    │       ├── <challenge_name>.md
-    │       ├── resources/
-    │       │   ├── screenshot.png
-    │       │   ├── solve.py
-    │       │   └── artifact.pcap
-    ├── Swara/
-    │   └── MISC/           # Markdown and Word docx writeups
-    └── pratik/
-        └── Word_Documents/ # Official styled .docx exports for offline study
+    └── <author-handle>/
+        └── <Category>/
+            ├── <challenge_name>.md
+            └── resources/
+                ├── screenshot.png
+                ├── solve.py
+                └── artifact.pcap
 ```
 
 
 
+* **Interactive Solvers:** Most writeups include functional Python solver scripts inline or inside the associated `resources/` folder.
+* **Reproducibility:** Re-run exploits locally by referencing the provided target ports and docker configs where applicable.
+* **Questions / Feedback:** Found a typo or want to share alternative solve techniques? Open an Issue or submit a Pull Request!
+
+---
 
 <div align="center">
   <sub>Built by the <b>OWASP PCCOE Student Chapter</b> for the cybersecurity community.</sub><br />
