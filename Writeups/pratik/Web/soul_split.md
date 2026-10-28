@@ -228,7 +228,7 @@ def solve():
         print("[+] Session awakened! Fetching flag from /soul/fragment...")
         frag_res = session.get(f"{BASE_URL}/soul/fragment")
         if "OWASP{" in frag_res.text or "FLAG{" in frag_res.text:
-            print("[🏆] Flag retrieved successfully!")
+            print("[] Flag retrieved successfully!")
             for line in frag_res.text.splitlines():
                 if "{" in line and "}" in line:
                     print(f"    {line.strip()}")

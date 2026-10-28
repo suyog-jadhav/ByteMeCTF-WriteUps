@@ -201,8 +201,8 @@ def solve():
             count = data.get("count", count)
             print(f"[+] Fragment collected! Total: {count}/{target_count}")
             if data.get("complete"):
-                print("\n[🏆] SUCCESS! The Soul Fragment accepted you!")
-                print(f"[🏆] FLAG: {data.get('flag')}\n")
+                print("\n[] SUCCESS! The Soul Fragment accepted you!")
+                print(f"[] FLAG: {data.get('flag')}\n")
                 return data.get("flag")
         elif resp.status_code == 429:
             print("[-] Rate limited on identity. Adjusting identity header...")
@@ -229,8 +229,8 @@ $ python solve_trial.py
 ...
 [+] Fragment collected! Total: 20/20
 
-[🏆] SUCCESS! The Soul Fragment accepted you!
-[🏆] FLAG: OWASP{the_soul_vault_has_been_opened}
+[] SUCCESS! The Soul Fragment accepted you!
+[] FLAG: OWASP{the_soul_vault_has_been_opened}
 ```
 
 The server verifies that the target threshold of 20 fragments has been reached and outputs the flag:

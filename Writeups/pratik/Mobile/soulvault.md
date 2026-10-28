@@ -294,7 +294,7 @@ def run():
     
     data = sol_resp.json()
     if data.get("status") == "awakened":
-        print(f"\n[🏆] FLAG: {data.get('message')}\n")
+        print(f"\n[] FLAG: {data.get('message')}\n")
 
 if __name__ == "__main__":
     run()
@@ -316,7 +316,7 @@ $ python solve_soulvault.py
 [*] Submitting proof of work...
 [!] Server response (200): {"fragment_id":"3d5f9a1b","message":"OWASP{soul_vault_fragment_recovered}","status":"awakened"}
 
-[🏆] FLAG: OWASP{soul_vault_fragment_recovered}
+[] FLAG: OWASP{soul_vault_fragment_recovered}
 ```
 
 ![Automated Proof-of-Work Execution](resources/soulvault_solve.png)

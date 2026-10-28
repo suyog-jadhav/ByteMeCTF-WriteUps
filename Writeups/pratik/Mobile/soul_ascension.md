@@ -283,7 +283,7 @@ def solve():
     padding = plaintext[-1]
     unpadded = plaintext[:-padding]
     flag = unpadded.decode('utf-8')
-    print(f"\n[🏆] Plaintext Flag: {flag}\n")
+    print(f"\n[] Plaintext Flag: {flag}\n")
 
 if __name__ == "__main__":
     solve()
@@ -298,7 +298,7 @@ $ python solve_ascension.py
 [*] Transcript: A9yromem:B4moon:C2tpvm:D82620
 [*] Derived XTEA Key: ['0x296e838e', '0x18151fd4', '0x2bf7b750', '0x81e28509']
 
-[🏆] Plaintext Flag: OWASP{s0ul_4sc3nd3d_th3_f1fth_guardian}
+[] Plaintext Flag: OWASP{s0ul_4sc3nd3d_th3_f1fth_guardian}
 ```
 
 ![Standalone Python Decryption Trace](resources/soul_ascension_solve.png)

@@ -326,7 +326,7 @@ OWASP{1t'_z_n07_0ver_Y3T}
                       /claim
                          │
                          ▼
-                 💎 SOUL STONE FLAG
+                  SOUL STONE FLAG
 ```
 
 ---
@@ -445,7 +445,7 @@ Flag
 ```
 
 ---
-# 🛡️ Remediation
+# ️ Remediation
 
 A production application should avoid relying on simple string blacklists for SSRF protection.
 
@@ -480,7 +480,7 @@ Recommended mitigations include:
    Compromise of the public-facing application should not automatically provide broad access to internal infrastructure.
 
 ---
-# 🐳 Running Locally
+#  Running Locally
 
 Clone the repository:
 
@@ -510,7 +510,7 @@ http://127.0.0.1:5000
 If port `5000` is already occupied, use another published host port.
 
 ---
-# ⚙️ Configuration
+# ️ Configuration
 
 The challenge uses environment variables for its cryptographic secrets.
 
@@ -526,7 +526,7 @@ For a public CTF deployment, these values should be randomized per deployment.
 Never publish the production values in the repository.
 
 ---
-# 🧰 Tools Used
+#  Tools Used
 
 - Browser
 - Browser Developer Tools
@@ -536,7 +536,7 @@ Never publish the production values in the repository.
 - Docker / Docker Compose
 
 ---
-# 📋 Timeline
+#  Timeline
 
 | Step | Action | Result |
 |---|---|---|
@@ -565,4 +565,4 @@ Avengers / Soul Stone themed Web Exploitation Challenge.
 
 ### THE ARCHIVE REMEMBERS EVERYTHING.
 
-### 💎 CLAIM THE SOUL STONE.
+###  CLAIM THE SOUL STONE.

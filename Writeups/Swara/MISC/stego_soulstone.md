@@ -40,7 +40,7 @@ OWASP{the_soul_remembers}
 ## Solve Flow
 
 ```text
-server.log ➔ Trailing Spaces/Tabs ➔ Binary Stream ➔ ASCII ➔ Base64 String ➔ Base64 Decode ➔ XOR with "PHANTOM" ➔ Flag
+server.log -> Trailing Spaces/Tabs -> Binary Stream -> ASCII -> Base64 String -> Base64 Decode -> XOR with "PHANTOM" -> Flag
 ```
 
 ---

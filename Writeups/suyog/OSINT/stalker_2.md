@@ -64,7 +64,7 @@ The keyword **"hidden ninja"** stands out as a clear clue toward the secret chan
 
 > **Note:** This comment was **not present initially** when the challenge was released. Since participants were struggling with the steep difficulty and the challenge sat at zero solves, the author later posted a comment from the secret account onto one of the videos as an additional breadcrumb to help players bridge the gap.
 
-Browsing through the uploaded videos and checking their comment sections—specifically on the video titled **`Obito sad [ AMV ] 💔`**—uncovers this newly added comment:
+Browsing through the uploaded videos and checking their comment sections—specifically on the video titled **`Obito sad [ AMV ] `**—uncovers this newly added comment:
 
 - User: **`@hiddenninja5770`**
 - Comment: *"Yo"*
@@ -113,7 +113,7 @@ OWASP{hiddenninja5770}
 |---|---|
 | Intermediate Channel | `SUYOG [AMV]` (`@itz_suyog_`) |
 | Lead / Clue Keyword | `hidden ninja` (Channel Description) |
-| Clue Comment | Comment on `Obito sad [ AMV ] 💔` by `@hiddenninja5770` |
+| Clue Comment | Comment on `Obito sad [ AMV ] ` by `@hiddenninja5770` |
 | Secret Channel Name | `Hidden Ninja` |
 | Channel Handle / ID | `hiddenninja5770` |
 
@@ -134,6 +134,6 @@ OWASP{hiddenninja5770}
 |---|---|---|
 | 1 | Searched `suyog amv` on YouTube | Located intermediate account `SUYOG [AMV]` (`@itz_suyog_`) |
 | 2 | Inspected channel description | Found keyword clue `"hidden ninja"` |
-| 3 | Checked comments on `Obito sad [ AMV ] 💔` | Found comment by `@hiddenninja5770` |
+| 3 | Checked comments on `Obito sad [ AMV ] ` | Found comment by `@hiddenninja5770` |
 | 4 | Searched `hidden ninja` on YouTube | Discovered secret channel `Hidden Ninja` (`@hiddenninja5770`) |
 | 5 | Verified bio on `@hiddenninja5770` | Confirmed `"secret account"` tag and assembled flag |

@@ -37,7 +37,7 @@ OWASP{xor_is_not_encryption}
 ## Intended Solve Path
 
 ```text
-Inspect files ➔ Examine config.ini ➔ Suspicious value: 66 ➔ Decimal 66 to Hex 0x42 ➔ Test 0x42 as XOR key ➔ Decrypt backup.dat ➔ Flag
+Inspect files -> Examine config.ini -> Suspicious value: 66 -> Decimal 66 to Hex 0x42 -> Test 0x42 as XOR key -> Decrypt backup.dat -> Flag
 ```
 
 ---

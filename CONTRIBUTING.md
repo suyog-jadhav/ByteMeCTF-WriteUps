@@ -4,7 +4,7 @@ Thank you for contributing challenge solutions and official writeups to the **By
 
 ---
 
-## 📁 Repository Directory Structure
+## Repository Directory Structure
 
 All writeups live inside the `Writeups/` directory, organized by author handle and challenge category:
 
@@ -30,7 +30,7 @@ Writeups/
 
 ---
 
-## 🚀 Contributor Workflow
+## Contributor Workflow
 
 ### 1. Fork and Clone
 ```bash
@@ -57,7 +57,7 @@ git checkout -b <your-name>/<category>-<challenge-name>
 
 ---
 
-## ✍️ Writeup Markdown Template
+## Writeup Markdown Template
 
 Every challenge writeup should follow this structured template:
 
@@ -136,7 +136,7 @@ Walkthrough of discovering the flaw and formulating the exploit.
 
 ---
 
-## ✅ Quality Checklist Before Opening a PR
+## Quality Checklist Before Opening a PR
 
 - [ ] Folder structure matches `Writeups/<author>/<Category>/`
 - [ ] Filenames use lowercase snake_case (`challenge_name.md`)
@@ -148,7 +148,7 @@ Walkthrough of discovering the flaw and formulating the exploit.
 
 ---
 
-## 👥 Authors & Maintainers
+## Authors & Maintainers
 
 Maintained by **Suyog Jadhav** and the **OWASP PCCOE Team**.  
 Have questions? Reach out in the OWASP PCCOE community or open an Issue.

@@ -4,7 +4,7 @@ Official challenge solutions and walkthroughs by **Swara Shirke** ([@swaraops](h
 
 ---
 
-## 📁 Challenges
+##  Challenges
 
 | Challenge | Category | Difficulty | Key Concept | Writeup Link |
 |---|---|:---:|---|:---:|
@@ -13,7 +13,7 @@ Official challenge solutions and walkthroughs by **Swara Shirke** ([@swaraops](h
 
 ---
 
-## 📄 Word Documents
+##  Word Documents
 Original styled Word documents are available in this folder:
 * [`Broken_Backup_Writeup.docx`](Broken_Backup_Writeup.docx)
 * [`Stego_SoulStone_Writeup.docx`](Stego_SoulStone_Writeup.docx)
