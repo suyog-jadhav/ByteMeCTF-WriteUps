@@ -2,7 +2,7 @@
 
   <img src="assets/logo.png" alt="ByteMe CTF Logo" width="170" /><br /><br />
   <h1>ByteMeCTF 2026 - Official Challenge Solutions</h1>
-  <h3>The Definitive Writeups Archive by the OWASP PCCOE Team</h3>
+  <h3>Writeups Archive by the OWASP PCCOE Team</h3>
 
   <p>
     <a href="https://github.com/suyog-jadhav/ByteMeCTF-WriteUps"><img src="https://img.shields.io/badge/Event-ByteMeCTF_2026-orange?style=for-the-badge&logo=target" alt="Event" /></a>
@@ -408,18 +408,10 @@ ByteMeCTF-WriteUps/
         └── Word_Documents/ # Official styled .docx exports for offline study
 ```
 
----
 
-## Information for Participants & Learners
 
-* **Interactive Solvers:** Most writeups include functional Python solver scripts inline or inside the associated `resources/` folder.
-* **Reproducibility:** Re-run exploits locally by referencing the provided target ports and docker configs where applicable.
-* **Offline Reading:** For participants who prefer formatted document exports, pre-compiled Word documents are available in [Writeups/pratik/Word_Documents/](Writeups/pratik/Word_Documents/) and [Writeups/Swara/MISC/](Writeups/Swara/MISC/).
-* **Questions / Feedback:** Found a typo or want to share alternative solve techniques? Open an Issue or submit a Pull Request!
-
----
 
 <div align="center">
-  <sub>Built with care by the <b>OWASP PCCOE Student Chapter</b> for the cybersecurity community.</sub><br />
+  <sub>Built by the <b>OWASP PCCOE Student Chapter</b> for the cybersecurity community.</sub><br />
   <sub>&copy; 2026 ByteMeCTF. All rights reserved.</sub>
 </div>
